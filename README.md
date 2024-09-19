@@ -24,23 +24,91 @@ This guide covers how to:
 1. **Download Ubuntu ISO:**
    - Go to the [Ubuntu website](https://ubuntu.com/download/desktop) and download the latest Ubuntu Desktop ISO (preferably the LTS version).
 
+
 2. **Create a New Virtual Machine in VMware Fusion:**
-   - Open VMware Fusion and click on `File` > `New`.
-   - Choose `Install from disc or image` and select the Ubuntu ISO you downloaded.
-   - Allocate resources (e.g., 2 CPU cores, 4GB RAM, and 20GB of disk space).
-   - Finish the VM creation.
 
-3. **Install Ubuntu:**
-   - Follow the on-screen instructions to install Ubuntu inside the VM.
-   - Set up your language, time zone, and username.
+ - Open VMware Fusion and click on `File` > `New`.
 
-4. **Install VMware Tools:**
+<img width="1000" alt="Screenshot 2024-09-19 at 4 56 56 PM" src="https://github.com/user-attachments/assets/bdb5d98c-5ee1-49ba-a329-b65c245cbead">  
+
+- Choose `Install from disc or image`  
+
+<img width="1000" alt="Screenshot 2024-09-19 at 4 57 30 PM" src="https://github.com/user-attachments/assets/f6250fe3-5c78-42fd-a8f8-6f8f2c9b6711">   
+
+- Select the Ubuntu ISO you downloaded.   
+
+<img width="1000" alt="Screenshot 2024-09-19 at 4 57 43 PM" src="https://github.com/user-attachments/assets/2978b15b-c827-4d5c-9284-5f191a10b9da">   
+
+- Select Installation Method "Easy or Customised"
+  
+<img width="1000" alt="Screenshot 2024-09-19 at 4 58 20 PM" src="https://github.com/user-attachments/assets/b769aeec-4c7b-4b14-ac3b-2f0480c85070">  
+
+- Allocate resources (e.g., 2 CPU cores, 4GB RAM, and 20GB of disk space) and Click Finish to proceed the Installation
+
+<img width="1000" alt="Screenshot 2024-09-19 at 4 58 44 PM" src="https://github.com/user-attachments/assets/18057116-b761-4197-8077-fed9b912da60">    
+
+4. **Install Ubuntu:**
+
+- Setup the network configurations for the VM either bridg or DHCP wth wifi enabled or not
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 30 44 PM" src="https://github.com/user-attachments/assets/ef9c2064-52c6-45c4-9a3a-02534963fbb6">
+
+- Now on the Ubuntu Installation User Interface select the desired laabnguage
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 01 31 PM" src="https://github.com/user-attachments/assets/3631f0c4-2aad-4e2d-aa43-ee7826b783b8">     
+
+- Select any accessiblity settings for the server accordingly  
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 01 42 PM" src="https://github.com/user-attachments/assets/84180c6d-7571-4612-810a-7edd62041599">  
+
+- Select Internet settings for the VM
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 01 56 PM" src="https://github.com/user-attachments/assets/00f67c78-96ff-4cf3-85b5-2e53d49fceaa">  
+
+- Click Install Ubuntu
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 02 05 PM" src="https://github.com/user-attachments/assets/a19cd72b-32ca-4510-8115-3deecd63e0c0">  
+
+- Select installation type
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 02 13 PM" src="https://github.com/user-attachments/assets/4e11ad36-3754-45c7-80d3-d2f3ba1e5e41">  
+
+- Select any third party apps "Default" or "Extended" selection
+  
+<img width="1000" alt="Screenshot 2024-09-19 at 5 02 25 PM" src="https://github.com/user-attachments/assets/0337b9a9-fd59-4183-8185-a26eddae7884">  
+
+- Choose if you want to install any proprietry softwares along with the OS
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 02 36 PM" src="https://github.com/user-attachments/assets/b0631db1-d87c-4535-96a3-f89140b2ce49">  
+
+- Choose storage operations for the VM
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 03 14 PM" src="https://github.com/user-attachments/assets/fbc57d51-1b78-4c23-8edb-ae58e948f8c3">  
+
+- Creat your account for the server
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 03 59 PM" src="https://github.com/user-attachments/assets/4db3a489-05db-4f1b-ab9a-6a561a5f197b">  
+
+- Select your desired timezone
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 04 07 PM" src="https://github.com/user-attachments/assets/99bc3672-267e-4248-bedb-e7a4ee9669fb">   
+
+- Review all details and proceed with the OS installation
+
+<img width="1000" alt="Screenshot 2024-09-19 at 5 04 18 PM" src="https://github.com/user-attachments/assets/ac3c458a-4fe6-45ec-bdca-0ce4dcb5a45e"> 
+
+- Finish the VM creation.
+
+5. **Install VMware Tools:**
    - After Ubuntu is installed, go to `Virtual Machine` > `Install VMware Tools` in the VMware Fusion menu.
    - Follow the on-screen steps to install it inside Ubuntu for better performance.
 
 ---  
 
-## Cloning project to the Server  
+
+## 3. Cloningg the project and Set Up of Python and Next.js Application  
+
+### 3.1 Cloning project to the Server  
 Create SSH key in your server and add it in the Github to clone the project to server
 ```bash
 ssh-kygen -t ed25519
@@ -61,19 +129,18 @@ apt install git -y
 git clone --your-git ssh-key-here
 ```
 
-## 3. Set Up Python and Next.js Application
 
-### 3.1 Update System and Install Required Packages
+### 3.2 Update System and Install Required Packages
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 3.2 Install Python and Dependencies
+### 3.3 Install Python and Dependencies
 Install Python 3:
 
 ```bash
-sudo apt install python3 python3-pip python3-venv python3-dev -y
+sudo apt install python3 python3-pip python3-venv python3-dev python3-dev python3-distutils -y
 ```
 
 Create a Virtual Environment:
@@ -88,10 +155,10 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install Python Dependencies: If you have a requirements.txt file:
+Install Python Dependencies:
 
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 Install Additional Build Tools:
 
@@ -99,21 +166,28 @@ Install Additional Build Tools:
 sudo apt install build-essential libssl-dev libffi-dev
 ```
 
-### 3.3 Install Node.js for Ext.js Application
-Install Node.js and npm:
+### 3.4 Install Node.js for Next.js Application
+Install NVM for Node and npm:  
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt install curl
 ```
 ```bash
-sudo apt install -y nodejs
+ccurl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+```bash
+export NVM_DIR="$HOME/.nvm"
+15  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+16  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
 Verify Installation:
 
 ```bash
-node -v
+nvm -v
 ```
 ```bash
+nvm install 18.20.3
+node -v
 npm -v
 ```
 Install Next.js CLI (if needed):
@@ -184,31 +258,97 @@ Nginx Configuration for Proxying to Python and Serving Next.js Files:
 Example Nginx configuration:
 
 ```nginx
+
 server {
     listen 80;
     server_name your_domain.com www.your_domain.com;
-
     location / {
-        proxy_pass http://127.0.0.1:8000;
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    server_name your_domain.com www.your_domain.com;
+
+    ssl_certificate /etc/letsencrypt/live/your_domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your_domain.comprivkey.pem;
+   # add_header Access-Control-Allow-Origin *;
+   # add_header Access-Control-Allow-Methods *;
+   # add_header Access-Control-Allow-Headers *;
+
+
+        location / {
+        proxy_pass http://127.0.0.1:3000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    location /static/ {
-        alias /path/to/your/static/files/;  # Path where Ext.js static files are located
-    }
 
-    location /media/ {
-        alias /path/to/your/media/files/;  # If any media files need to be served
-    }
-
-    # SSL configuration (if needed)
-    # listen 443 ssl;
-    # ssl_certificate /etc/nginx/ssl/your_domain.com.crt;
-    # ssl_certificate_key /etc/nginx/ssl/your_domain.com.key;
+   location /_next/webpack-hmr {
+    proxy_pass http://localhost:3000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
 }
+    }
+    server {
+    listen 80;
+    server_name your_domain.com www.your_domain.com;
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+}
+
+server {
+    listen 443 ssl;
+    server_name your_domain.com www.your_domain.com;
+
+    ssl_certificate /etc/letsencrypt/live/your_domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your_domain.com/privkey.pem;
+    #add_header Access-Control-Allow-Origin *;
+    #add_header Access-Control-Allow-Methods *;
+    #add_header Access-Control-Allow-Headers *;
+
+
+        location / {
+        #proxy_pass http://127.0.0.1:8081;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Connection "keep-alive";
+        proxy_buffering off;
+
+        proxy_read_timeout 3600s;
+        proxy_send_timeout 3600s;
+        proxy_set_header Transfer-Encoding $http_transfer_encoding;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+       # proxy_set_header Access-Control-Allow-Origin *;
+
+        proxy_pass http://127.0.0.1:8081;
+
+    }
+    location /_next/webpack-hmr {
+    proxy_pass http://127.0.0.1:8081;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+    }
 ```
 Enable the Configuration:
 
@@ -224,12 +364,67 @@ Restart Nginx:
 sudo systemctl restart nginx
 ```
 
-## 6. Final Steps
-### 6.1 Running Your Python Application
+## 6. Running Python and Next.js application
+### 6.1 Creating the service file for Running Your Python Application
 
-To run your Python application (for Django/Flask):
+Add the Database credeenrtials and other secret details in your .env file and test the project  
+```bash
+make start
+```
 
-(to be added)
+Now create a service file in the below location to run the python project as a service  in linux  
+```bash
+vim /etc/systemd/system/mypythonproject.service
+```
+and Enter the below configurations to run the project  
+
+```bash
+[Unit]
+Description=Python Backend
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/Backend-application
+ExecStart=/bin/bash -c 'make start'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+Verify python service status
+```bash
+systemctl start python.service
+```
+```bash
+systemctl status python.serrvice
+```
+### 6.2 Running the Next.js Frontend using the pm2  
+
+Switch to the frontend project
+```basah
+cd /path/to/your/frontend
+```
+Now add the backend details in the .env of the project
+```bash
+vim .env
+```
+Test the frontend
+```bash
+npm run start
+```
+Once everything is good Install the pm2 and run the frontend in the backgroundd process using it
+```bash
+npm install pm2 --location=global
+```
+Run the frontend
+```bash
+pm2 start "npm start" --name frontend
+```
+Verify it in the browser by copying your IP address and pasting with the port application running on  
+```bash
+http://192.1681.123.321:3000
+```
 
 ## 7. Additional Notes
 Make sure to configure a firewall (e.g., ufw) to allow traffic on port 80 (and 443 if using SSL).
@@ -244,6 +439,8 @@ sudo certbot --nginx -d your_domain.com -d www.your_domain.com
 ```python
 
 This guide should help you set up everything required for your POC. Let me know if any part needs further clarification or additional details!
+```
+
 
 
 
