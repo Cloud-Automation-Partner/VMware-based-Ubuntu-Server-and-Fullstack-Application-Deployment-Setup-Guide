@@ -1,5 +1,7 @@
 # VMware Ubuntu Server with Fullstack Application Deployment & Nagios monitoring Setup Guide
 
+The VMware Ubuntu Server with Fullstack Application Deployment & Nagios Monitoring Setup Guide offers a comprehensive walkthrough for setting up a virtualized Ubuntu Server using VMware. It covers the installation and configuration of a fullstack application (frontend, backend, and database), followed by the integration of Nagios for real-time monitoring. This guide includes steps for setting up the virtual environment, deploying the application, and configuring Nagios to monitor server performance and application health, ensuring a stable and scalable deployment.
+
 ### This guide covers how to:  
 
 1. Install VMware on macOS
